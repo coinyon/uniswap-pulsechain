@@ -91,6 +91,14 @@ export const COMMON_BASES: ChainCurrencyList = {
   ],
   [SupportedChainId.GOERLI]: [ExtendedEther.onChain(SupportedChainId.GOERLI), WETH9_EXTENDED[SupportedChainId.GOERLI]],
   [SupportedChainId.KOVAN]: [ExtendedEther.onChain(SupportedChainId.KOVAN), WETH9_EXTENDED[SupportedChainId.KOVAN]],
+  [SupportedChainId.PULSECHAIN_TESTNET]: [
+    ExtendedEther.onChain(SupportedChainId.PULSECHAIN_TESTNET),
+    DAI,
+    USDC,
+    USDT,
+    WBTC,
+    WETH9_EXTENDED[SupportedChainId.MAINNET],
+  ],
   [SupportedChainId.ARBITRUM_ONE]: [
     ExtendedEther.onChain(SupportedChainId.ARBITRUM_ONE),
     DAI_ARBITRUM_ONE,

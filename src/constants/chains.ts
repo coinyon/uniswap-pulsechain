@@ -9,6 +9,7 @@ export enum SupportedChainId {
   RINKEBY = 4,
   GOERLI = 5,
   KOVAN = 42,
+  PULSECHAIN_TESTNET = 940,
 
   ARBITRUM_ONE = 42161,
   ARBITRUM_RINKEBY = 421611,
@@ -22,6 +23,7 @@ export const ALL_SUPPORTED_CHAIN_IDS: SupportedChainId[] = [
   SupportedChainId.RINKEBY,
   SupportedChainId.GOERLI,
   SupportedChainId.KOVAN,
+  SupportedChainId.PULSECHAIN_TESTNET,
 
   SupportedChainId.ARBITRUM_ONE,
   SupportedChainId.ARBITRUM_RINKEBY,
@@ -35,6 +37,7 @@ export const L1_CHAIN_IDS = [
   SupportedChainId.RINKEBY,
   SupportedChainId.GOERLI,
   SupportedChainId.KOVAN,
+  SupportedChainId.PULSECHAIN_TESTNET,
 ] as const
 
 export type SupportedL1ChainId = typeof L1_CHAIN_IDS[number]
@@ -131,6 +134,13 @@ export const CHAIN_INFO: ChainInfo = {
     infoLink: 'https://info.uniswap.org/#/',
     label: 'Görli',
     nativeCurrency: { name: 'Görli ETH', symbol: 'görETH', decimals: 18 },
+  },
+  [SupportedChainId.PULSECHAIN_TESTNET]: {
+    docs: 'https://docs.uniswap.org/',
+    explorer: 'https://scan.pulsechain.com/',
+    infoLink: 'https://info.uniswap.org/#/',
+    label: 'PulseChain Testnet',
+    nativeCurrency: { name: 'Testnet Pulse', symbol: 'TPLS', decimals: 18 },
   },
   [SupportedChainId.OPTIMISM]: {
     blockWaitMsBeforeWarning: ms`10m`,
